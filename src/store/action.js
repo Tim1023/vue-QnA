@@ -10,5 +10,8 @@ export default {
     },
     initializeData({ commit }) {
         commit('INITIALIZE_DATA')
-    }
+    },
+  rememberTime({ commit }) {
+    commit('REMBER_TIME')
+  }
 }

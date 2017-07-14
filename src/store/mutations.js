@@ -7,7 +7,7 @@ const REMBER_TIME = 'REMBER_TIME'
 const INITIALIZE_DATA ='INITIALIZE_DATA'
 export default {
     [ADD_ITEMNUM](state, num) {
-        state.itemNumm += num;
+        state.itemNum += num;
     },
     [REMBER_ANSWER](state, id){
         state.answerid.push(id)

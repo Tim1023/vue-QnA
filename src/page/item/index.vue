@@ -1,26 +1,33 @@
 <template>
-  	<div>
-    	<itemcontainer father-component="item"></itemcontainer>
-  	</div>
+  <div>
+    <itemcontainer father-component="item"></itemcontainer>
+  </div>
 </template>
 
 <script>
-import itemcontainer from '../../components/itemcontainer'
+  import itemcontainer from '../../components/itemcontainer'
+  import { mapState, mapActions } from 'vuex'
 
-export default {
-	name: 'item',
-  	components: {
-   		itemcontainer
-  	},
-  	created(){
+  export default {
+    name: 'item',
+    components: {
+      itemcontainer
+    },
+    methods: {
+      ...mapActions([
+        'rememberTime',
+      ]),
+
+    },
+    created(){
       //进入题目页面，开始计时
-  		this.$store.commit('REMBER_TIME');
-  	}
-}
+      this.rememberTime();
+    }
+  }
 
 </script>
 
 <style lang="less">
-    
+
 
 </style>
